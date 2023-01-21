@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>24-bit Floating Point Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link REL="SHORTCUT ICON" HREF="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/calculator.css"/>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.976.0.min.js"></script>
+    <script src="js/calculator.js"></script>
+</head>
+<body>
+    <div id="calculator-container" style="height:90%;">
+        <div style="margin-left: 30%; margin-right: 30%; margin-top:2.5%; padding: 1%; background-color: slategray;">
+            <div style="padding-bottom:2%">
+                <span style="display: block; text-align: center;">24-bit floating point calculator</span>
+            </div>
+            <div>
+                <span class="left-calc-widget">Decimal Number</span>
+                <input class="right-calc-widget"type="text" name="float_input_number" id="float_input" value="2.5" onchange="lambdaCalculate('number')">
+            </div>
+            <div>
+                <span class="left-calc-widget">Hexadecimal Float</span>
+                <input class="right-calc-widget"type="text" name="float_output_number" id="float_output" value="0x28000" onchange="lambdaCalculate('hexadecimal')">
+            </div>
+            <div>
+                <span class="left-calc-widget">Binary Float</span>
+                <input class="right-calc-widget"type="text" name="float_output_binary" id="binary_output" value="101000000000000000" onchange="lambdaCalculate('binary')">
+            </div>
+            <div id="results-container" style="padding-top: 2.5%; padding-bottom:2.5%; display: block; text-align: center;">
+                <span id="results" style="height: 2%; display: block;"></span>
+            </div>
+        </div>
+        
+    </div>
+    <!-- TODO LATER
+        <div class="second-container" style="display: block; padding-top: 1%; padding-bottom: 1%; height: auto; background-color: darkslateblue;"
+        Explanation: <br> hello
+    </div>
+    <div class="footer">Hi!</div>
+    -->
+</body>
+</html>
